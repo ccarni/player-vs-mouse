@@ -28,18 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalPlayerSpeed;
     public float verticalPlayerSpeed;
 
-    public bool enableDashing;
-    public float playerDashSpeed;
-    public float verticalDashSpeed;
-    private bool dashIsAvailable;
-    private float dashTime;
-    public float playerDashTime;
-    public float dashCoolDown;
-    private bool playerIsDashing;
-    private bool dashingRight;
-    private bool dashingLeft;
-    private bool dashingUp;
-
     //this part is being used to check for the ground.
     private bool grounded, rightGrounded, leftGrounded, topGrounded;
     private bool canJumpNormal, canJumpRight, canJumpLeft, canJumpTop;
@@ -95,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
 
         x = Input.GetAxisRaw("Horizontal");
         space = Input.GetKey(jumpButton);
-        
     }
 
     private void Move()
