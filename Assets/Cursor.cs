@@ -5,18 +5,22 @@ using UnityEngine;
 public class Cursor : MonoBehaviour
 {
     public GameObject thingToSpawn; 
+    private GameObject thing;
+    private Camera cam;
     private Vector3 mousePos;
-    private Object thing;
 
     void Start() 
     {
         mousePos = Input.mousePosition;
-        thing = Instantiate(thingToSpawn, mousePos, Quaternion.identity);
+        mousePos.z = 10f;
+
+        cam = Camera.main;
+
+        thing = Instantiate(thingToSpawn, cam.ScreenToWorldPoint(mousePos), Quaternion.identity);
     }
 
     void Update()
     {
-        mousePos = Input.mousePosition;
-        // thing.transform.position = mousePos;
+        thing.GetComponent<Transform>().position = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 }

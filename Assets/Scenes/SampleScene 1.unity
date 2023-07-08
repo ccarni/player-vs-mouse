@@ -245,6 +245,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!1 &282341756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282341758}
+  - component: {fileID: 282341757}
+  m_Layer: 0
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &282341757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282341756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9fc9d2c5475684b9dfcb0c06165c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingToSpawn: {fileID: 4790257165931885112, guid: aeaa4c67ef22b9b4f84eed8d4ddaad1a, type: 3}
+--- !u!4 &282341758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282341756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312860890
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +831,7 @@ GameObject:
   - component: {fileID: 1310322938}
   - component: {fileID: 1310322941}
   - component: {fileID: 1310322940}
-  - component: {fileID: 1310322943}
+  - component: {fileID: 1310322942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -915,7 +960,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1310322943
+--- !u!114 &1310322942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -924,43 +969,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310322937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc9f6acbabd6984abb1473da564e5b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ead3c901bf5ef6d4db60bfb4f563412b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpButton: 32
+  spinStopButton: 115
   xAcceleration: 1000
   xDecceleration: 200
-  xMaxSpeed: 5
-  yMaxSpeed: 60
-  spinMaxSpeed: 800
-  horizontalPlayerSpeed: 5
-  verticalPlayerSpeed: 5
+  xMaxSpeed: 8
+  yMaxSpeed: 40
+  spinMaxSpeed: 900
+  horizontalPlayerSpeed: 0
+  verticalPlayerSpeed: 0
   enableDashing: 0
-  playerDashSpeed: 1
-  verticalDashSpeed: 1
-  playerDashTime: 1
-  dashCoolDown: 1
+  playerDashSpeed: 0
+  verticalDashSpeed: 0
+  playerDashTime: 0
+  dashCoolDown: 0
   groundChecker: {fileID: 333624373}
   rightChecker: {fileID: 805856051}
   leftChecker: {fileID: 361341839}
   topChecker: {fileID: 1557898232}
-  touchingGroundRadius: 0.5
-  touchingGroundSideRadius: 0.2
+  touchingGroundRadius: 0
+  touchingGroundSideRadius: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
-  jumpForce: 100
-  comboJumpBoost: 1
-  comboSpinBoost: 2
-  maxJumpBoost: 1.5
-  sideJumpTorque: 40
-  topJumpTorque: 130
-  sideJumpForce: 9
+    m_Bits: 0
+  jumpForce: 700
+  sideJumpTorque: 60
+  topJumpTorque: 125
+  sideJumpForce: 5
   topJumpForce: 10
   fallGravity: 1.5
   earlyFallGravity: 1
-  coyoteTime: 0.2
+  coyoteTime: 2
   coyoteTimer: 0
+  comboJumpBoost: 1
+  comboSpinBoost: 15
+  maxJumpBoost: 3
+  spinStopTime: 1
 --- !u!1 &1395066210
 GameObject:
   m_ObjectHideFlags: 0
