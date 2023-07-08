@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CheckboxToggle : MonoBehaviour
@@ -19,13 +20,13 @@ public class CheckboxToggle : MonoBehaviour
                     textOffset = new Vector3(0, 0, 0);
                 }
                 textPrefabInstance = Instantiate(textPrefab, transform.position + textOffset, Quaternion.identity);
-                // textPrefabInstance.GetComponent<TextMesh>().text = "Press E to interact";
+                textPrefabInstance.GetComponent<TextMeshPro>().text = "Press E to interact";
                 // textPrefabInstance.GetComponent<TMPro.TextMeshProUGUI>().text = "Press E to interact";
                 textShowing = true;
             }
             if(Input.GetKeyDown("e"))
             {
-                Debug.Log("pressed E in trigger zone");
+                FindObjectOfType<PlayerMovement>().canJump = true;
             }
         }
     }
