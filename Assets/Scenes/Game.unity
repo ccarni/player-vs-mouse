@@ -704,7 +704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112453355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.38, y: 0, z: 0}
+  m_LocalPosition: {x: -11.38, y: 0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5573,6 +5573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpButton: 32
   spinStopButton: 115
+  canJump: 0
   xAcceleration: 1000
   xDecceleration: 200
   xMaxSpeed: 8
@@ -5583,11 +5584,11 @@ MonoBehaviour:
   rightChecker: {fileID: 805856051}
   leftChecker: {fileID: 361341839}
   topChecker: {fileID: 1557898232}
-  touchingGroundRadius: 0
-  touchingGroundSideRadius: 0
+  touchingGroundRadius: 0.2
+  touchingGroundSideRadius: 0.3
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   jumpForce: 700
   sideJumpTorque: 60
   topJumpTorque: 125

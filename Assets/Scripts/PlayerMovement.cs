@@ -7,13 +7,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    //CONSTANTS
+    [Header("Buttons")]
 
     public KeyCode jumpButton;
     public KeyCode spinStopButton = KeyCode.S;
 
+    // references
     private Rigidbody2D rb;
 
+    public bool canJump;
+
+    // input
     private float x;
     private bool space, s;
 
@@ -109,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (!space) return;
+        if (!space || !canJump) return;
 
 
         if (canJumpNormal)
