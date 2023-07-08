@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Buttons")]
 
+    public Animator animator;
     public KeyCode jumpButton;
     public KeyCode spinStopButton = KeyCode.S;
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool canJump;
+    public bool canDoubleJump;
 
     // input
     private float x;
@@ -30,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
 
     //controls x and y speed when using wasd.
     public float horizontalPlayerSpeed;
-    public float verticalPlayerSpeed;
 
     //this part is being used to check for the ground.
     private bool grounded, rightGrounded, leftGrounded, topGrounded;
@@ -68,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetInput();
+        animator.SetFloat("Speed", Mathf.Abs(horizontalPlayerSpeed));
     }
 
     private void FixedUpdate()
@@ -109,6 +111,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * earlyFallGravity * Time.deltaTime;
         }
+
+        horizontalPlayerSpeed = rb.velocity.x;
     }
 
     private void Jump()
