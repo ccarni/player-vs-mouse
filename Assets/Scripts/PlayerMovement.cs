@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Buttons")]
 
+    public Animator animator;
     public KeyCode jumpButton;
 
     // references
@@ -17,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Enable/Disable")]
     public bool enableJump;
     public bool enableDoubleJump;
+    public bool canJump;
+    public bool canDoubleJump;
 
     [Header("Inputs")]
     private float x;
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     private bool jumpAvailable;
+
+
 
     //ground check
     private bool grounded;
@@ -64,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetInput();
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     private void FixedUpdate()
@@ -108,7 +114,9 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.y > 0 && !space)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * earlyFallGravity * Time.deltaTime;
+
         }   
+
     }
 
     private void Jump()
