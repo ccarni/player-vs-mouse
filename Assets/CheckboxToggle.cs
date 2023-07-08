@@ -26,7 +26,7 @@ public class CheckboxToggle : MonoBehaviour
             }
             if(Input.GetKeyDown("e"))
             {
-                FindObjectOfType<PlayerMovement>().canJump = true;
+                FindObjectOfType<PlayerMovement>().enableJump = true;
             }
         }
     }
