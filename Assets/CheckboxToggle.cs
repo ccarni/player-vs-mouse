@@ -20,7 +20,7 @@ public class CheckboxToggle : MonoBehaviour
                 }
                 textPrefabInstance = Instantiate(textPrefab, transform.position + textOffset, Quaternion.identity);
                 // textPrefabInstance.GetComponent<TextMesh>().text = "Press E to interact";
-                textPrefabInstance.GetComponent<TMPro.TextMeshProUGUI>().text = "Press E to interact";
+                // textPrefabInstance.GetComponent<TMPro.TextMeshProUGUI>().text = "Press E to interact";
                 textShowing = true;
             }
             if(Input.GetKeyDown("e"))
