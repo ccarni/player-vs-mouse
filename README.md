@@ -6,5 +6,4 @@
 
 ## Download Links
 
-- [PC Shutdown](https://beegle.itch.io/pc-shutdown)
-- [Operation Shutdown](https://beegle.itch.io/pc-shutdown)
+- [Operation Shutdown](https://mingming48.itch.io/operation-shutdown)
