@@ -95,6 +95,11 @@ public class PlayerMovement : MonoBehaviour
         //move
         rb.AddForce(Vector2.right * x * xAcceleration, ForceMode2D.Force);
 
+        if (Mathf.Abs(rb.velocity.x) <= xStoppingThreshold && x == 0)
+        {
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+
         // slow down
         if ((x == 0 || Mathf.Sign(x) != Mathf.Sign(rb.velocity.x)) && Mathf.Abs(rb.velocity.x) > xStoppingThreshold)
         {
