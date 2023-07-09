@@ -9,6 +9,7 @@ public class InteractScript : MonoBehaviour
 
     public AudioClip soundClip;
     private AudioSource audioSource;
+    public VideoPlayer videoPlayer;
     public InteractionType interactionType;
     public VideoClip video;
     private bool isChecked = false;
@@ -29,13 +30,16 @@ public class InteractScript : MonoBehaviour
         }
         GameObject camera = GameObject.Find("Main Camera");
 
-        var videoPlayer = camera.AddComponent<VideoPlayer>();
-        videoPlayer.playOnAwake = false;
-        videoPlayer.clip = video;
-        videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
-        videoPlayer.loopPointReached += EndReached;
-        videoPlayer.SetDirectAudioVolume(0, 0.04f);
-        videoPlayer.Play();
+        if (videoPlayer != null)
+        {
+            Debug.Log("doing stuff");
+            videoPlayer.playOnAwake = false;
+            videoPlayer.clip = video;
+            videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+            videoPlayer.loopPointReached += EndReached;
+            videoPlayer.SetDirectAudioVolume(0, 0.04f);
+            videoPlayer.Play();
+        }
     }
 
     void Update() {
@@ -51,7 +55,6 @@ public class InteractScript : MonoBehaviour
 
     private void EndReached(VideoPlayer vp)
     {
-        Debug.Log("doing stuff");
         Application.Quit();
     }
 
