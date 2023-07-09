@@ -2543,6 +2543,10 @@ PrefabInstance:
       propertyPath: textPrefab
       value: 
       objectReference: {fileID: 5570935564770438343, guid: 9d363dab46fc67940ab9993978c5591a, type: 3}
+    - target: {fileID: 129748430277778114, guid: a0fd60c00f5b3a341b1a5fa3083b6de3, type: 3}
+      propertyPath: checkboxType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 129748430277778115, guid: a0fd60c00f5b3a341b1a5fa3083b6de3, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2767,20 +2771,20 @@ MonoBehaviour:
   jumpButton: 32
   enableJump: 0
   enableDoubleJump: 0
-  canJump: 0
-  canDoubleJump: 0
   xAcceleration: 1000
   xDecceleration: 400
   xMaxSpeed: 4
   yMaxSpeed: 40
   xStoppingThreshold: 0.25
   yStoppingThreshold: 0.2
+  grounded: 0
   groundChecker: {fileID: 333624373}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   touchingGroundRadius: 0.1
   jumpForce: 8
+  velocity: {x: 0, y: 0}
   fallGravity: 2
   earlyFallGravity: 1.5
   coyoteTime: 0.2

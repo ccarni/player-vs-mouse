@@ -7,7 +7,6 @@ public class Cursor : MonoBehaviour
     public GameObject thingToSpawn; 
     private GameObject thing;
     private float cameraZ;
-    private float thrust = 20f;
 
     void Start() 
     {

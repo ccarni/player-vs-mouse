@@ -18,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Enable/Disable")]
     public bool enableJump;
     public bool enableDoubleJump;
-    public bool canJump;
-    public bool canDoubleJump;
 
     [Header("Inputs")]
     private float x;
@@ -34,24 +32,17 @@ public class PlayerMovement : MonoBehaviour
 
     public float xStoppingThreshold = 0.2f, yStoppingThreshold = 0.2f;
 
-    [Header("Jumping")]
-    private bool jumpAvailable;
-
-
 
     //ground check
-    private bool grounded;
+    public bool grounded = false;
     public Transform groundChecker;
     public LayerMask whatIsGround;
     public float touchingGroundRadius;
 
     private bool jumping;
     public float jumpForce = 8f;
+    public Vector2 velocity;
 
-    //public float sideJumpTorque = 60;
-    //public float topJumpTorque = 125;
-    //public float sideJumpForce = 5;
-    //public float topJumpForce = 10f;
 
     public float fallGravity = 1.5f;
     public float earlyFallGravity = 1f;
@@ -107,10 +98,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
-        //clamp speed
+        // clamp speed
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMaxSpeed, xMaxSpeed), Mathf.Clamp(rb.velocity.y, -yMaxSpeed, yMaxSpeed));
-
+        velocity = rb.velocity;
     }
 
     private void YMove() 

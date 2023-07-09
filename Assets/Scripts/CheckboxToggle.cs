@@ -12,7 +12,8 @@ public class CheckboxToggle : MonoBehaviour
         Jump, 
         Minimap, 
         DoubleJump,
-        Scroller
+        Scroller,
+        Generic
     }
 
     private bool isOn = false;
@@ -29,7 +30,7 @@ public class CheckboxToggle : MonoBehaviour
     public Sprite offSprite;
 
     [SerializeField]
-    public CheckboxType checkboxType;
+    public CheckboxType checkboxType = CheckboxType.Generic;
 
     void Start() {
         if (isChecked)
@@ -53,7 +54,6 @@ public class CheckboxToggle : MonoBehaviour
             }
             if(Input.GetKeyDown(interactionButton))
             {
-                FindObjectOfType<PlayerMovement>().enableJump = true;
                 HandleInteraction();
             }
         }
