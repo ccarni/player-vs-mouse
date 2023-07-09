@@ -6232,17 +6232,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1213725546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 129748430277778114, guid: a0fd60c00f5b3a341b1a5fa3083b6de3, type: 3}
-  m_PrefabInstance: {fileID: 1736955160}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae50ce080a3a8aa4b8212185ac1571ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1310322937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6308,12 +6297,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1736982587, guid: 14a999cdccf128f4d95b01d7a3e70a3e, type: 3}
+  m_Sprite: {fileID: 2047901152, guid: 54a6975fb68644b45b01763b397c1727, type: 3}
   m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.84375}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6327,7 +6316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310322937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.76, y: -47.02, z: -1}
+  m_LocalPosition: {x: -50.85, y: 2.18, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6410,7 +6399,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.5, y: 0.84375}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -6586,7 +6575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1351281213}
   - component: {fileID: 1351281214}
-  - component: {fileID: 1351281215}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -6621,19 +6609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547181e47f6b5af44b17682ca9e9d88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1351281215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351281212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f806abe5946063a4686269345964ba1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitCheckbox: {fileID: 1213725546}
 --- !u!1 &1444043722
 GameObject:
   m_ObjectHideFlags: 0
