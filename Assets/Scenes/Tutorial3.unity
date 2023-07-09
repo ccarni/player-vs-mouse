@@ -6837,9 +6837,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1310322944}
   jumpButton: 32
-  enableJump: 0
+  enableJump: 1
   enableDoubleJump: 0
-  canJump: 0
+  canJump: 1
   canDoubleJump: 0
   xAcceleration: 1000
   xDecceleration: 400
