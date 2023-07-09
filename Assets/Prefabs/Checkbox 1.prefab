@@ -47,6 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae50ce080a3a8aa4b8212185ac1571ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChecked: 0
+  interactionButton: 101
+  name: Press E to Interact
+  textPrefab: {fileID: 0}
+  textOffset: {x: 0, y: 0, z: 0}
+  onSprite: {fileID: 948203694, guid: a90f4fbd70990c04b8c5ce4dfd6801b3, type: 3}
+  offSprite: {fileID: 760684006, guid: a90f4fbd70990c04b8c5ce4dfd6801b3, type: 3}
+  checkboxType: 0
 --- !u!212 &129748430277778126
 SpriteRenderer:
   m_ObjectHideFlags: 0

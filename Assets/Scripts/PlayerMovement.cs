@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public float xMaxSpeed = 8;
     public float yMaxSpeed = 40;
 
+    public float xStoppingThreshold = 0.2f, yStoppingThreshold = 0.2f;
+
     [Header("Jumping")]
     private bool jumpAvailable;
 
@@ -94,10 +96,12 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector2.right * x * xAcceleration, ForceMode2D.Force);
 
         // slow down
-        if (x == 0 || Mathf.Sign(x) != Mathf.Sign(rb.velocity.x))
+        if ((x == 0 || Mathf.Sign(x) != Mathf.Sign(rb.velocity.x)) && Mathf.Abs(rb.velocity.x) > xStoppingThreshold)
         {
             rb.AddForce(new Vector2(-rb.velocity.normalized.x * xDecceleration, 0f));
         }
+
+
 
         //clamp speed
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMaxSpeed, xMaxSpeed), Mathf.Clamp(rb.velocity.y, -yMaxSpeed, yMaxSpeed));
