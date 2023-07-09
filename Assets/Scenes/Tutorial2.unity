@@ -6492,7 +6492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107e88f4c216bde41a2562e1cfa819b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTime: 4
+  idleTime: 20
   stoppedThreshold: 0.2
   xOffset: -3.5
   yOffset: 1
