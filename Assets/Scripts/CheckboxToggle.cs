@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CheckboxToggle : MonoBehaviour
 {
+    public GameObject minimapCanvas;
     public enum CheckboxType {
         Jump, 
         Minimap, 
@@ -68,6 +69,11 @@ public class CheckboxToggle : MonoBehaviour
             FindObjectOfType<PlayerMovement>().canJump = isChecked;
         } else if (checkboxType == CheckboxType.DoubleJump) {
             FindObjectOfType<PlayerMovement>().canDoubleJump = isChecked;
+        }
+
+        else if (checkboxType == CheckboxType.Minimap)
+        {
+            minimapCanvas.SetActive(isChecked);
         }
     }
 
