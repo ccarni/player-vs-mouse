@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadNextScene : MonoBehaviour
+public class LoadSceneOnDelay : MonoBehaviour
 {
     public float timeToWait = 9f;
     void Start() {

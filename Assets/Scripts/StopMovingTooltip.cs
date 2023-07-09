@@ -24,7 +24,7 @@ public class StopMovingTooltip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(rb.velocity.x) >= stoppedThreshold)
+        if (Mathf.Abs(rb.velocity.x) >= stoppedThreshold || Mathf.Abs(rb.velocity.y) >= stoppedThreshold * 10f)
         {
             idleTimer = idleTime;
             Destroy(popup);

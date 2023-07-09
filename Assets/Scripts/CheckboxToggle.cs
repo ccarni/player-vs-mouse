@@ -81,6 +81,8 @@ public class CheckboxToggle : MonoBehaviour
         else if (checkboxType == CheckboxType.Scroller)
         {
             scroller.transform.position = transform.position + Vector3.up * scrollerOffset;
+            scroller.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, scroller.GetComponent<Scroller1>().speed);
+            FindObjectOfType<PlayerMovement>().transform.Translate(Vector3.up);
         }
     }
 

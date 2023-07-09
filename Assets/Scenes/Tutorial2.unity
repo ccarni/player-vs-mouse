@@ -6343,7 +6343,7 @@ Rigidbody2D:
   m_LinearDrag: 0.01
   m_AngularDrag: 1
   m_GravityScale: 0.9
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 745b0a2343d937040a34f058147e16e1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -6575,6 +6575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351281213}
   - component: {fileID: 1351281214}
+  - component: {fileID: 1351281215}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -6609,6 +6610,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547181e47f6b5af44b17682ca9e9d88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1351281215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351281212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb4e0b97b2b8c047a061a3bd4402d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionChecker: {fileID: 1736955161}
 --- !u!1 &1444043722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7315,6 +7329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0fd60c00f5b3a341b1a5fa3083b6de3, type: 3}
+--- !u!1 &1736955161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129748430277778113, guid: a0fd60c00f5b3a341b1a5fa3083b6de3, type: 3}
+  m_PrefabInstance: {fileID: 1736955160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777130348
 GameObject:
   m_ObjectHideFlags: 0
