@@ -244,6 +244,24 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 581242632169111494, guid: 2434394ac5bee56408306a24b5b0ce72, type: 3}
   m_PrefabInstance: {fileID: 1780727882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &256471018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256471009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e88f4c216bde41a2562e1cfa819b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleTime: 15
+  stoppedThreshold: 0.2
+  xOffset: -1
+  yOffset: 1
+  tooltipObject: {fileID: 5570935564770438343, guid: 9d363dab46fc67940ab9993978c5591a, type: 3}
+  popupText: Press R to Restart
 --- !u!1 &259231883
 GameObject:
   m_ObjectHideFlags: 0
