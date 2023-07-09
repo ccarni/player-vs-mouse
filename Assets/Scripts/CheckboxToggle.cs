@@ -69,9 +69,9 @@ public class CheckboxToggle : MonoBehaviour
         }
 
         if (checkboxType == CheckboxType.Jump) {
-            FindObjectOfType<PlayerMovement>().canJump = isChecked;
+            FindObjectOfType<PlayerMovement>().enableJump = isChecked;
         } else if (checkboxType == CheckboxType.DoubleJump) {
-            FindObjectOfType<PlayerMovement>().canDoubleJump = isChecked;
+            FindObjectOfType<PlayerMovement>().enableDoubleJump = isChecked;
         }
 
         else if (checkboxType == CheckboxType.Minimap)
