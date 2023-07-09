@@ -6,10 +6,13 @@ using UnityEngine;
 public class CheckboxToggle : MonoBehaviour
 {
     public GameObject minimapCanvas;
+    public GameObject scroller;
+    public float scrollerOffset;
     public enum CheckboxType {
         Jump, 
         Minimap, 
-        DoubleJump
+        DoubleJump,
+        Scroller
     }
 
     private bool isOn = false;
@@ -58,7 +61,7 @@ public class CheckboxToggle : MonoBehaviour
 
     private void HandleInteraction() {
         isChecked = !isChecked;
-        if (isChecked)
+        if (isChecked && !(checkboxType == CheckboxType.Scroller))
         {
             GetComponent<SpriteRenderer>().sprite =  onSprite;
         } else {
@@ -74,6 +77,10 @@ public class CheckboxToggle : MonoBehaviour
         else if (checkboxType == CheckboxType.Minimap)
         {
             minimapCanvas.SetActive(isChecked);
+        }
+        else if (checkboxType == CheckboxType.Scroller)
+        {
+            scroller.transform.position = transform.position + Vector3.up * scrollerOffset;
         }
     }
 
